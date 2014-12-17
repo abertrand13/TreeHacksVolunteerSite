@@ -1,0 +1,45 @@
+body, html {
+	font-family: 'Lato', sans-serif;
+	overflow-x: hidden;
+	margin: 0;
+	height: 100%;
+}
+
+#menubtn {
+	background-color: rgba(255, 255, 255, .1);
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	left: 5px;
+}
+
+#menu {
+	position: fixed;
+	z-index: 0;
+	background-color: #ecf0f1;
+	height: 100%;
+}
+
+#menutitle {
+	padding: 5px;
+}
+
+.active {
+	background-color: black;
+	color: white;
+}
+
+.menulink {
+	padding: 5px;
+	border-top: 1px solid #bdc3c7;
+}
+
+#content {
+	min-height: 100%;
+	position: relative;
+	background-color: white;
+	padding-top: 5em; /*correlates with height of titlebar */
+	padding-bottom: 10px;
+}

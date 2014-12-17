@@ -1,0 +1,15 @@
+#titlebar {
+	background-color: #e74c3c;
+	color: white;
+	
+	text-align: center;
+	display: block;
+	font-size: 4em;
+	
+	width: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	position: fixed;
+	top: 0;
+}

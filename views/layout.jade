@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    title= title
+    
+    // This is a comment.
+    // Font
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:400,700,900', type='text/css')
+    
+    // Page specific CSS
+    link(rel='stylesheet', href='/css/#{pagetitle}.css')
+
+    // Libraries
+    script(src='/js/libs/jquery-2.1.1.min.js')
+    script(src='/js/libs/d3.min.js')
+
+    // Menu and Titlebar
+    script(src='js/menu.js')
+    link(rel='stylesheet', href='/css/titlebar.css')
+    link(rel='stylesheet', href='/css/menu.css')
+
+  body
+    block content

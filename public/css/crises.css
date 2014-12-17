@@ -1,0 +1,41 @@
+body, html {
+	width: 100%;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+#panicbtn {
+	background-color: rgba(255, 255, 255, .1);
+	height: 50px;
+	width: 50px;
+	border-radius: 5px;
+	display: inline-block;
+	position: absolute;
+	right: 5px;
+}
+
+.crisis {
+	width: 95%;
+	background-color: #e74c3c;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	
+	border-radius: 5px;
+}
+
+.crisistitle {
+	color: white;
+	display: block;
+	font-size: 3em;
+}
+
+.crisistext {
+	color: white;
+	font-size: 2em;
+}
