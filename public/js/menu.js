@@ -6,12 +6,12 @@ $(document).ready(function() {
 		switch($("#content").css("left")) {
 			case "0px":
 				console.log(menuWidth);
-				$("#titlebar").css("position", "relative");
+				//$("#titlebar").css("position", "relative");
 				$("#content").animate({"left": menuWidth});
 			break;
 
 			default:
-				$("#titlebar").css("position", "fixed");
+				//$("#titlebar").css("position", "fixed");
 				$("#content").animate({"left": "0px"});
 			break;
 		}

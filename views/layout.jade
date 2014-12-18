@@ -19,5 +19,23 @@ html
     link(rel='stylesheet', href='/css/titlebar.css')
     link(rel='stylesheet', href='/css/menu.css')
 
+    // Page specific js
+    block script
+
   body
-    block content
+
+    div(id="menu")
+        div(id="menutitle")
+            h3 TreeHacks Menu
+        div(class="menulink" onclick="link('/')") Home
+        div(class="menulink" onclick="link('announcements')") Announcements
+        div(class="menulink" onclick="link('schedule.html')") Weekend Schedule
+        div(class="menulink" onclick="link('organizers.html')") Organizers
+        div(class="menulink" onclick="link('contactinfo.html')") Contact Info
+        div(class="menulink" onclick="link('crises.html')") Crisis Manual
+
+    div(id="content")
+        div(id="titlebar") TreeHacks
+            div(id="menubtn")
+
+        block content
