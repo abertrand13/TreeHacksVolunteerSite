@@ -5,7 +5,6 @@ $(document).ready(function() {
 	$("#menubtn").click(function() {
 		switch($("#content").css("left")) {
 			case "0px":
-				console.log(menuWidth);
 				//$("#titlebar").css("position", "relative");
 				$("#content").animate({"left": menuWidth});
 			break;
