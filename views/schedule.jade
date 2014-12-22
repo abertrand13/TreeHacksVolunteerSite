@@ -1,0 +1,38 @@
+extends layout
+
+block content
+	div(id='schedule')
+		div(id='friday', class='day', style='background-color:#f1c40f')
+			h1 FRIDAY
+			div(class='event')
+				p
+					strong EVENT NAME
+					br
+					| 12:00PM - 1:00PM
+					br
+					| HELLO THERE. DESCRIPTION
+			div(class='event')
+				p CATS ARE COOL.  THERE'S NO TIME BECAUSE CATS ARE COOL ALL THE TIME
+		div(id='saturday', class='day', style='background-color:#e67e22')
+			h1 SATURDAY
+			div(class='event')
+				p
+					strong HELLO THERE
+			div(class='event')
+				p
+					strong HACKING
+					br
+					| 12:00PM - 12:00AM
+					br
+					| Hackers will be going at it all day.  We'll be providing caffeine and stuff.  And goofing off.
+
+		div(id='sunday', class='day', style='background-color:#e74c3c')
+			h1 SUNDAY
+			div(class='event')
+				p
+					strong HACKING
+					br 
+					| 12:00PM - 12:00AM
+					br 
+					| I HAVE IMPORTANT CODING TO DO!  I CANNOT BE BOTHERED WITH THE MUNDANE-NESS OF GETTING PIZZA.
+
