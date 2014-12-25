@@ -11,6 +11,8 @@ var schedule = require('./routes/schedule');
 var contacts = require('./routes/contacts');
 var crises = require('./routes/crises');
 var users = require('./routes/users');
+//get contact info
+var contactinfo = require('./routes/contactinfo');
 
 var app = express();
 
@@ -32,6 +34,7 @@ app.use('/schedule', schedule);
 app.use('/contacts', contacts);
 app.use('/crisismanual', crises);
 app.use('/users', users);
+app.use('/contactinfo', contactinfo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

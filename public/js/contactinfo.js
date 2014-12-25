@@ -1,10 +1,10 @@
 $(document).ready(function() {
 
-	var contacts = [{"name": "Alex Bertrand", "phone": "111-111-1111", "email": "me@me.com", "organizer": true},
-					{"name": "Jason Teplitz", "phone": "111-111-1111", "email": "me@me.com", "organizer": false},
-					{"name": "Russell Kaplan", "phone": "111-111-1111", "email": "me@me.com", "organizer": false}];
+	$.getJSON('/contactinfo', function(data) {
+		console.log(data);
+		var contacts = data;
 
-	d3.select("#contacts").selectAll("div")
+		d3.select("#contacts").selectAll("div")
 		.data(d3.values(contacts))
 		.enter().append("div")
 			.attr("class", function(d) {
@@ -16,30 +16,31 @@ $(document).ready(function() {
 			})
 			.text(function(d) { return d.name; });
 
-	$("#search").keyup(function() {
-		var text = $(this).val().toLowerCase();
-		$(".contact").each(function() {
-			if($(this).text().toLowerCase().indexOf(text) == -1) {
-				$(this).css("display", "none");
+		$("#search").keyup(function() {
+			var text = $(this).val().toLowerCase();
+			$(".contact").each(function() {
+				if($(this).text().toLowerCase().indexOf(text) == -1) {
+					$(this).css("display", "none");
+				} else {
+					$(this).css("display", "");
+				}
+			})
+		});
+
+		$(".contact").click(function() {
+			//PERHAPS THIS SHOULD BE D3 INSTEAD?//
+
+			var data = $(this)[0]["__data__"];
+			var name = data["name"];
+			var email = data["email"];
+			var phone = data["phone"];
+			
+			if($(this).text().indexOf(email) == -1) {
+				$(this).append("<br>   " + email);
+				$(this).append("<br>   " + phone);
 			} else {
-				$(this).css("display", "");
+				$(this).text(name);
 			}
-		})
-	});
-
-	$(".contact").click(function() {
-		//PERHAPS THIS SHOULD BE D3 INSTEAD?//
-
-		var data = $(this)[0]["__data__"];
-		var name = data["name"];
-		var email = data["email"];
-		var phone = data["phone"];
-		
-		if($(this).text().indexOf(email) == -1) {
-			$(this).append("<br>   " + email);
-			$(this).append("<br>   " + phone);
-		} else {
-			$(this).text(name);
-		}
+		});
 	});
 });
